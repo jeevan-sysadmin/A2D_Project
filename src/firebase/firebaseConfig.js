@@ -1,6 +1,7 @@
-// Firebase configuration and initialization
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
+// If you need authentication, import it as follows:
+// import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCqTqvna4GEYri_EFj2079Swsl7fdNpnSY",
@@ -13,7 +14,10 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
-const db = firebase.firestore();
+// Initialize Firestore (or Auth if needed)
+const db = getFirestore(app);
+// const auth = getAuth(app); // Uncomment if authentication is required
+
 export { db };

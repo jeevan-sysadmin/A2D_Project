@@ -1,29 +1,41 @@
+// components/AdminPage.js
 import React, { useEffect, useState } from 'react';
 import { db } from '../firebase/firebaseConfig';
+import { collection, getDocs } from 'firebase/firestore';
 
 const AdminPage = () => {
   const [submissions, setSubmissions] = useState([]);
 
+  const fetchSubmissions = async () => {
+    try {
+      const querySnapshot = await getDocs(collection(db, 'formSubmissions'));
+      const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      setSubmissions(data);
+    } catch (error) {
+      console.error("Error fetching submissions: ", error);
+    }
+  };
+
   useEffect(() => {
-    const fetchSubmissions = async () => {
-      const snapshot = await db.collection('formSubmissions').get();
-      setSubmissions(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
-    };
     fetchSubmissions();
   }, []);
 
   return (
     <div>
       <h1>Admin Page</h1>
-      <div>
-        {submissions.map((submission) => (
-          <div key={submission.id} style={{ border: '1px solid #ddd', margin: '8px', padding: '8px' }}>
-            <p><strong>Name:</strong> {submission.name}</p>
-            <p><strong>Email:</strong> {submission.email}</p>
-            <p><strong>Message:</strong> {submission.message}</p>
-          </div>
-        ))}
-      </div>
+      {submissions.length > 0 ? (
+        <ul>
+          {submissions.map(submission => (
+            <li key={submission.id}>
+              <p>Name: {submission.name}</p>
+              <p>Email: {submission.email}</p>
+              <p>Message: {submission.message}</p>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No submissions found.</p>
+      )}
     </div>
   );
 };

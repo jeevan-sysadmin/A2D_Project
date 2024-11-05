@@ -3,7 +3,6 @@
 .header {
   background-color: #333; /* Dark background */
   color: white; /* White text color */
-  padding: 1rem; /* Padding around the header */
   position: fixed; /* Fixed position at the top */
   top: 0; /* Align to the top */
   width: 100%; /* Full width */
@@ -26,7 +25,7 @@
 }
 
 .logo {
-  max-width: 200px; /* Logo size */
+  max-width: 300px; /* Logo size */
   height: auto; /* Maintain aspect ratio */
 }
 

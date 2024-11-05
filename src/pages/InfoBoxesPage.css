@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     justify-content: space-around; /* Space boxes evenly */
     padding: 20px;
-    background-color: #f4f4f4; /* Light background */
+    background-color: #f2f3cff1; /* Light background */
   }
   .info-box {
     background-color: white; /* White background for boxes */
@@ -12,7 +12,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 10px;
     margin: 5px;
-    width: calc(25% - 40px); /* Adjust width for 4 boxes in a row */
+    width: 50px; /* Adjust width for 4 boxes in a row */
     min-width: 250px; /* Minimum width for responsiveness */
     text-align: center; /* Center text */
 }

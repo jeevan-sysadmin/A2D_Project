@@ -1,13 +1,14 @@
 import React from 'react';
-import ThreeDModel from '../components/ThreeDModel';
 import Form from '../components/Form';
+import HeroSection from '../components/HeroSection';
+
 
 const HomePage = () => {
   return (
     <div>
-      <h1>Welcome to the 3D Website</h1>
-      <ThreeDModel />
-      <Form />
+      
+      <HeroSection />
+      {/* <Form /> */}
     </div>
   );
 };

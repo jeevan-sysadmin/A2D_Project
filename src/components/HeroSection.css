@@ -1,85 +1,94 @@
 .hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
-    padding: 0 2rem;
-    background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
-    color: #ffffff;
-    text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 0 2rem;
+  background: linear-gradient(135deg, #000000, #2a2a2a);
+  color: #ffffff;
+  text-align: left;
+}
+
+.text-content {
+  max-width: 600px;
+  flex: 1;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+.main-text {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #eaeaea;
+}
+
+.highlight-people {
+  color: #FFD700; /* Yellow color */
+  font-family: 'Gentle Calligraphy', cursive; /* Apply Gentle Calligraphy font */
+}
+
+.highlight-pc {
+  color: #FFD700; /* Yellow color for PC */
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #999999;
+  margin-bottom: 30px;
+  font-family: monospace; /* Apply monospace font */
+}
+
+.build-button {
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  background-color: #ff4500;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.build-button:hover {
+  background-color: #ff3300;
+  transform: scale(1.05);
+}
+
+.video-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero-gif {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  .text-content {
-    max-width: 600px;
-    flex: 1;
-    padding: 20px;
-    text-transform: uppercase;
-  }
-  
-  .main-text {
-    font-size: 3.5rem;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    color: #eaeaea;
-  }
-  
-  .tagline {
-    font-size: 1.2rem;
-    color: #999999;
-    margin-bottom: 30px;
-  }
-  
-  .build-button {
-    font-size: 1.2rem;
-    padding: 12px 30px;
-    background-color: #ff4500;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .build-button:hover {
-    background-color: #ff3300;
-    transform: scale(1.05);
-  }
-  
+
   .video-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 600px; /* Optional: limit the width */
-    padding: 20px;
+    max-width: 100%;
+    padding: 10px;
   }
-  
-  .hero-video {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+
+  .main-text {
+    font-size: 2.5rem;
   }
-  
-  /* Responsive adjustments for smaller screens */
-  @media (max-width: 768px) {
-    .hero-section {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .video-container {
-      max-width: 100%;
-      padding: 10px;
-    }
-  
-    .main-text {
-      font-size: 2.5rem;
-    }
-  
-    .build-button {
-      font-size: 1rem;
-      padding: 10px 20px;
-    }
+
+  .build-button {
+    font-size: 1rem;
+    padding: 10px 20px;
   }
-  
+}

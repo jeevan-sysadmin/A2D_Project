@@ -1,32 +1,36 @@
 import React, { useState } from 'react';
 import './HeroSection.css';
-import video from '../assets/video/PC.mp4'; 
-import Form from '../components/Form'; // Import the Form component
-import Modal from '../components/Modal'; // Import the Modal component
+import gif from '../assets/video/pc_3d.931dbb3564787a5552ac.gif'; 
+import Form from '../components/Form';
+import Modal from '../components/Modal';
 
 const HeroSection = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleButtonClick = () => {
-    setIsModalOpen(true); // Open the modal when the button is clicked
+    setIsModalOpen(true);
   };
 
   const closeModal = () => {
-    setIsModalOpen(false); // Close the modal
+    setIsModalOpen(false);
   };
 
   return (
     <section className="hero-section">
       <div className="text-content">
-        <h1 className="main-text">WE BUILD PEOPLE<br /> BEFORE WE <br /> BUILD PC</h1> 
-        <p className="tagline">Crafting Your Ultimate Gaming Experience - Unleash Your Power! Smart people work with Smart Systems. Customize your Dream PC</p>
+        <h1 className="main-text">
+          WE BUILD <span className="highlight-people">PEOPLE</span><br /> BEFORE WE <br /> BUILD <span className="highlight-pc">PC</span>
+        </h1> 
+        <p className="tagline">
+          Crafting Your Ultimate Gaming Experience - Unleash Your Power! Smart people work with Smart Systems. Customize your Dream PC
+        </p>
         <button className="build-button" onClick={handleButtonClick}>BUILD NOW</button>
       </div>
       <div className="video-container">
-        <video src={video} autoPlay loop muted className="hero-video" />
+        <img src={gif} alt="3D PC Animation" className="hero-gif" />
       </div>
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <Form /> {/* Render your Form inside the modal */}
+        <Form />
       </Modal>
     </section>
   );

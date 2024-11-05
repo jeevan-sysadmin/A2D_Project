@@ -1,0 +1,45 @@
+/* Set a full-page black background */
+.get-in-touch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh; /* Full viewport height */
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text color */
+    text-align: center; /* Center-align text */
+}
+
+.title {
+    font-size: 2.5rem; /* Large title size */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.description {
+    font-size: 1.2rem; /* Slightly larger font for description */
+    max-width: 600px; /* Limit description width for readability */
+    margin-bottom: 30px; /* Space below description */
+    line-height: 1.6; /* Improve readability */
+}
+
+.support-button {
+    background-color: #fccb06; /* Yellow background for button */
+    color: #000000; /* Black text color */
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for button */
+.support-button:hover {
+    background-color: #e6b800; /* Darker yellow on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.support {
+    width: 100%;
+    max-width: 300px;
+}

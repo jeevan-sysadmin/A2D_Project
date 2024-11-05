@@ -3,26 +3,42 @@
     flex-wrap: wrap;
     justify-content: space-around; /* Space boxes evenly */
     padding: 20px;
-    background-color: #f2f3cff1; /* Light background */
+    background-color: #b1ddf1; /* Light background */
   }
+  
   .info-box {
     background-color: white; /* White background for boxes */
-    border: 5px solid black; /* Bolder black border */
+    border: 3px solid black; /* Bolder black border */
     border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.096); /* Subtle shadow */
     padding: 10px;
     margin: 5px;
-    width: 50px; /* Adjust width for 4 boxes in a row */
+    width: 250px; /* Adjust width for 4 boxes in a row */
     min-width: 250px; /* Minimum width for responsiveness */
     text-align: center; /* Center text */
-}
-
-.info-box h2 {
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  /* Hover effect */
+  .info-box:hover {
+    background-color: #fccb06; /* Light gray background on hover */
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase shadow */
+  }
+  
+  .info-box h2 {
     color: #333; /* Darker text color */
     margin: 0 0 10px; /* Margin below heading */
-}
-
-.info-box p {
+  }
+  
+  .info-box h3 {
     color: #666; /* Lighter text color */
     margin: 0; /* Remove margin */
-}
+  }
+  
+  .warranty-logo {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    margin-top: 10px;
+  }
+  

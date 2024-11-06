@@ -1,0 +1,31 @@
+/* TermsAndConditions.css */
+
+.container {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+}
+
+.heading {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+a {
+  color: #1e90ff; /* Light blue for links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #87cefa; /* Slightly lighter blue on hover */
+}

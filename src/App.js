@@ -7,6 +7,7 @@ import CombinedPage from './pages/CombinedPage'; // Import the CombinedPage comp
 // import AdminPage from './pages/AdminPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import Terms from './components/TermsAndConditions';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           {/* <Route path="/admin" element={<AdminPage />} /> */}
-        </Routes>
+          <Route path="/terms" element={<Terms />} />        </Routes>
       </main>
       <Footer />
     </Router>

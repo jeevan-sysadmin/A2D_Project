@@ -1,4 +1,4 @@
-// components/Form.js
+//src\components\Form.js
 import React, { useState } from 'react';
 import { db } from '../firebase/firebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';
@@ -29,9 +29,22 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Get current date and time
+    const today = new Date();
+    const submissionDate = new Date(); // Format: "Wed Nov 06 2024 05:30:00 GMT+0530 (India Standard Time)"
+
+    // Combine the date and time into a new object to store in Firestore
+    const dataWithDateTime = {
+      ...formData,
+      submissionDate: submissionDate, // Store full date and time
+    };
+
     try {
-      await addDoc(collection(db, 'formSubmissions'), formData);
+      // Add the data to Firestore collection "formSubmissions"
+      await addDoc(collection(db, 'formSubmissions'), dataWithDateTime);
       alert("Form submitted successfully!");
+
+      // Clear form after submission
       setFormData({
         name: '',
         email: '',
@@ -202,9 +215,9 @@ const Form = () => {
           name="suggestions"
           value={formData.suggestions}
           onChange={handleChange}
-        ></textarea>
+        />
       </div>
-      <button type="submit" className="btn btn-light">Submit</button>
+      <button type="submit" className="btn btn-primary">Submit</button>
     </form>
   );
 };

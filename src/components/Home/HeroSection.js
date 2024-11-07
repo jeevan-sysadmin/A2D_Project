@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './HeroSection.css';
-import gif from '../assets/video/pc_3d.931dbb3564787a5552ac.gif'; 
-import logo1 from '../assets/logo/a2d.jpeg'; // Import the logo
-import Form from '../components/Form';
-import Modal from '../components/Modal';
+import gif from '../../assets/video/pc_3d.931dbb3564787a5552ac.gif'; 
+import logo1 from '../../assets/logo/a2d.jpeg'; // Import the logo
+import Form from '../Form/Form';
+import Modal from '../Modal';
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

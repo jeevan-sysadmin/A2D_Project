@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Solena&display=swap');
+
 .hero-section {
   display: flex;
   align-items: center;
@@ -54,13 +56,14 @@
 .main-text {
   font-size: 3rem;
   font-weight: bold;
-  line-height: 1.2;
+  line-height: 1.5;
   margin-bottom: 20px;
   color: #eaeaea;
 }
 
 .highlight-people, .highlight-pc {
   color: #FFD700;
+  font-family: Blackadder ITC;
 }
 
 .tagline {
@@ -160,7 +163,7 @@
   bottom: 20px;
   width: 100%;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #cccccc;
   font-style: italic;
 }
@@ -168,6 +171,7 @@
 .footer-quote .highlight-quote {
   color: #FFD700;
   font-weight: bold;
+  font-family: Lucida Calligraphy;
 }
 
 .footer-quote .author {
@@ -176,3 +180,76 @@
   font-size: 1rem;
   color: #ff4500;
 }
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .text-content, .video-container {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .main-text {
+    font-size: 2.5rem;
+  }
+
+  .build-button {
+    font-size: 1.1rem;
+    padding: 10px 25px;
+  }
+
+  .logo1 {
+    width: 70px;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 576px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .logo1-container {
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .text-content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .video-container {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .main-text {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .build-button {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+
+  .footer-quote {
+    font-size: 1rem;
+    padding: 1px;
+  }
+
+  .logo1 {
+    width: 60px;
+  }
+  .author{
+    font-size: 0.5rem;
+  }
+}
+

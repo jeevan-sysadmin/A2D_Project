@@ -21,7 +21,7 @@
   max-height: 80vh; /* Set a max height for the modal content */
   width: 100%; /* Responsive width */
   overflow-y: auto; /* Enable vertical scrolling */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.664); /* Slightly darker shadow */
   position: relative; /* Allows positioning of close button */
   animation: slideIn 0.3s ease; /* Smooth entrance animation */
 }
@@ -35,7 +35,7 @@
   position: absolute; /* Position absolute to the modal */
   top: 10px; /* Positioning from top */
   right: 10px; /* Positioning from right */
-  color: #333; /* Close button color */
+  color: #ffffff; /* Close button color */
   transition: color 0.3s; /* Transition effect on hover */
 }
 

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
-import logo from '../assets/logo/logo.png'; // Import the logo image
+import logo from '../../assets/logo/logo.png'; // Import the logo image
 
 const Header = () => {
   return (
@@ -22,7 +22,7 @@ const Header = () => {
             <li>
               <Link to="/contact">Contact</Link>
             </li>
-            <li><Link to="/terms">TermsAndConditions</Link></li>
+            <li><Link to="/terms">Terms & Conditions</Link></li>
             
           </ul>
         </nav>

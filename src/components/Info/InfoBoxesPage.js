@@ -1,13 +1,13 @@
 // src/pages/InfoBoxesPage.js
 import React from 'react';
 import './InfoBoxesPage.css';
-import warrantyLogo from '../assets/logo/1year.png'; // Import the warranty logo
-import Hours from '../assets/logo/48.png'; // Import the hours logo
-import order from '../assets/logo/order.png'; // Import the order logo
-import free from '../assets/logo/free.png'; // Import the free delivery logo
-import support from '../assets/logo/support.png'; // Import the support logo
-import consul from '../assets/logo/consultancy.webp'; 
-import packing from '../assets/logo/package.png'; 
+import warrantyLogo from '../../assets/logo/1year.png'; // Import the warranty logo
+import Hours from '../../assets/logo/48.png'; // Import the hours logo
+import order from '../../assets/logo/order.png'; // Import the order logo
+import free from '../../assets/logo/free.png'; // Import the free delivery logo
+import support from '../../assets/logo/support.png'; // Import the support logo
+import consul from '../../assets/logo/consultancy.webp'; 
+import packing from '../../assets/logo/package.png'; 
 
 
 const InfoBoxesPage = () => {
@@ -36,7 +36,7 @@ const InfoBoxesPage = () => {
 
       {/* New Content Section */}
       <div className="new-content">
-        <h1 className="centered-header">How Things Work</h1>
+        <h1 className="centered-header">--- How Things Work ---</h1>
         <div className="content-layout">
           <img src={support} alt="Support" className="support" />
           <div className="right-content">

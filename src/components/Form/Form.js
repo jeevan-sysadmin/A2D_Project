@@ -1,6 +1,6 @@
 //src\components\Form.js
 import React, { useState } from 'react';
-import { db } from '../firebase/firebaseConfig';
+import { db } from '../../firebase/firebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap is imported
 import './Form.css';
@@ -68,8 +68,8 @@ const Form = () => {
   return (
     <form onSubmit={handleSubmit} className="custom-form p-3">
       <div className="mb-3">
-        <h2 className="mb-4 text-white">PC Build Inquiry Form</h2>
-        <label className="form-label">Email:</label>
+        <h2 className="mb-4 text-black">PC Build Inquiry Form</h2>
+        <label className="form-label">Email_id: *</label>
         <input
           type="email"
           className="form-control"
@@ -80,7 +80,7 @@ const Form = () => {
         />
       </div>
       <div className="mb-3">
-        <label className="form-label">Hello, What's your name?</label>
+        <label className="form-label">Hello, What's your name? *</label>
         <input
           type="text"
           className="form-control"
@@ -91,7 +91,7 @@ const Form = () => {
         />
       </div>
       <div className="mb-3">
-        <label className="form-label">What's your exact age?</label>
+        <label className="form-label">What's your exact age? *</label>
         <input
           type="number"
           className="form-control"
@@ -102,7 +102,7 @@ const Form = () => {
         />
       </div>
       <div className="mb-3">
-        <label className="form-label">Provide your WhatsApp number:</label>
+        <label className="form-label">Provide your WhatsApp number: *</label>
         <input
           type="tel"
           className="form-control"
@@ -113,7 +113,7 @@ const Form = () => {
         />
       </div>
       <div className="mb-3">
-        <label className="form-label">Provide your Country code (For India +91):</label>
+        <label className="form-label">Provide your Country code (For India +91): *</label>
         <input
           type="text"
           className="form-control"
@@ -124,7 +124,7 @@ const Form = () => {
         />
       </div>
       <div className="mb-3">
-        <label className="form-label">Where are you located at? Mention the City or Town:</label>
+        <label className="form-label">Where are you located at? Mention the City or Town: *</label>
         <input
           type="text"
           className="form-control"
@@ -135,7 +135,7 @@ const Form = () => {
         />
       </div>
       <div className="mb-3">
-        <label className="form-label">What do you do for a living? E.g. Developer, Student, Photographer, etc.:</label>
+        <label className="form-label">What do you do for a living? E.g. Developer, Student, Photographer, etc.: *</label>
         <input
           type="text"
           className="form-control"
@@ -146,7 +146,7 @@ const Form = () => {
         />
       </div>
       <div className="mb-3">
-        <label className="form-label">For What Purpose does this PC is gonna serve you?</label>
+        <label className="form-label">For What Purpose does this PC is gonna serve you? *</label>
         <input
           type="text"
           className="form-control"
@@ -157,7 +157,7 @@ const Form = () => {
         />
       </div>
       <div className="mb-3">
-        <label className="form-label">The Best Investment you are planning for this PC?</label>
+        <label className="form-label">The Best Investment you are planning for this PC? *</label>
         <select
           className="form-select"
           name="investment"
@@ -174,7 +174,7 @@ const Form = () => {
         </select>
       </div>
       <div className="mb-3">
-        <label className="form-label">When do you need the PC by?</label>
+        <label className="form-label">When do you need the PC by? *</label>
         <select
           className="form-select"
           name="deliveryTime"
@@ -190,7 +190,7 @@ const Form = () => {
         </select>
       </div>
       <div className="mb-3">
-        <label className="form-label">What is your monthly income? (This will help us suggest the best investment for you)</label>
+        <label className="form-label">What is your monthly income? (This will help us suggest the best investment for you) *</label>
         <select
           className="form-select"
           name="monthlyIncome"
@@ -209,7 +209,7 @@ const Form = () => {
         </select>
       </div>
       <div className="mb-3">
-        <label className="form-label">If you have any suggestions or recommendations regarding this PC Build, kindly mention it in detail:</label>
+        <label className="form-label">If you have any suggestions or recommendations regarding this PC Build, kindly mention it in detail: *</label>
         <textarea
           className="form-control"
           name="suggestions"

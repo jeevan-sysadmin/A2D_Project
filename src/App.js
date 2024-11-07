@@ -1,13 +1,14 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import CombinedPage from './pages/CombinedPage'; // Import the CombinedPage component
 // import AdminPage from './pages/AdminPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import Terms from './components/TermsAndConditions';
+import Terms from './pages/TermsPage';
+import './App.css'
 
 function App() {
   return (

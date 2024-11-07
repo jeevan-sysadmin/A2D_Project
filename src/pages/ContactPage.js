@@ -1,5 +1,5 @@
 import React from 'react';
-import GetInTouchPage from './GetInTouchPage';
+import GetInTouchPage from '../components/Contact/GetInTouchPage';
 
 const ContactPage = () => {
   return (

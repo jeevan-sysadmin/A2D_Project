@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoBoxesPage from './InfoBoxesPage';
+import InfoBoxesPage from '../components/Info/InfoBoxesPage';
 
 
 const AboutPage = () => {

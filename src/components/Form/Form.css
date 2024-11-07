@@ -7,7 +7,7 @@ form {
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #f9f9f9;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgb(252, 249, 249);
 }
 
 label {
@@ -61,7 +61,7 @@ button[type="submit"]:hover {
 }
 /* Form.css */
 .custom-form {
-    background-color: #fccb06c7; /* Custom background color */
+    background-color: #ffe57e; /* Custom background color */
     color: #000000; /* Custom text color */
     padding: 20px; /* Optional: Add some padding for better spacing */
     border-radius: 5px; /* Optional: Add some border radius for rounded corners */

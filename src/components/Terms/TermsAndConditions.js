@@ -4,13 +4,14 @@ import './TermsAndConditions.css';
 
 const TermsAndConditions = () => {
   return (
-    <div className="container">
+    <div className="terms-container">
       <h1 className="heading">Terms & Conditions</h1>
 
-      <section className="section,heading">
+      <section className="section heading">
         <h2>Welcome to A2D PC Factory</h2>
-        <p>Thank you for choosing A2D PC FACTORY. Our commitment is to deliver high-performance custom PC solutions that empower your creativity, productivity, and enjoyment. By accessing or using our website and services, you agree to be bound by the following terms and conditions. Please read them carefully.</p>
+        
       </section>
+      <p>Thank you for choosing A2D PC FACTORY. Our commitment is to deliver high-performance custom PC solutions that empower your creativity, productivity, and enjoyment. By accessing or using our website and services, you agree to be bound by the following terms and conditions. Please read them carefully.</p>
 
       <section className="section">
         <h2>1. General Terms</h2>

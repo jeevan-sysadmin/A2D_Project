@@ -1,7 +1,7 @@
 import React from 'react';
 import HomePage from './HomePage';
-import InfoBoxesPage from './InfoBoxesPage';
-import GetInTouchPage from './GetInTouchPage';
+import InfoBoxesPage from '../components/Info/InfoBoxesPage';
+import GetInTouchPage from '../components/Contact/GetInTouchPage';
 
 const CombinedPage = () => {
   return (

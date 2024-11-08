@@ -1,9 +1,10 @@
-//src\components\Form.js
+// src/components/Form.js
 import React, { useState } from 'react';
 import { db } from '../../firebase/firebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap is imported
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './Form.css';
+import SuccessModal from '../../components/SuccessModal'; // Import the SuccessModal component
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -20,6 +21,7 @@ const Form = () => {
     monthlyIncome: '',
     suggestions: ''
   });
+  const [showModal, setShowModal] = useState(false); // State to control modal visibility
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,20 +31,12 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Get current date and time
-    const today = new Date();
-    const submissionDate = new Date(); // Format: "Wed Nov 06 2024 05:30:00 GMT+0530 (India Standard Time)"
-
-    // Combine the date and time into a new object to store in Firestore
-    const dataWithDateTime = {
-      ...formData,
-      submissionDate: submissionDate, // Store full date and time
-    };
+    const submissionDate = new Date(); // Get current date and time
+    const dataWithDateTime = { ...formData, submissionDate };
 
     try {
-      // Add the data to Firestore collection "formSubmissions"
       await addDoc(collection(db, 'formSubmissions'), dataWithDateTime);
-      alert("Form submitted successfully!");
+      setShowModal(true); // Show modal on successful submission
 
       // Clear form after submission
       setFormData({
@@ -64,6 +58,8 @@ const Form = () => {
       alert("Error submitting form, please try again.");
     }
   };
+
+  const handleCloseModal = () => setShowModal(false); // Close modal
 
   return (
     <form onSubmit={handleSubmit} className="custom-form p-3">
@@ -135,7 +131,7 @@ const Form = () => {
         />
       </div>
       <div className="mb-3">
-        <label className="form-label">What do you do for a living? E.g. Developer, Student, Photographer, etc.: *</label>
+        <label className="form-label">What do you do for a living? *</label>
         <input
           type="text"
           className="form-control"
@@ -190,7 +186,7 @@ const Form = () => {
         </select>
       </div>
       <div className="mb-3">
-        <label className="form-label">What is your monthly income? (This will help us suggest the best investment for you) *</label>
+        <label className="form-label">What is your monthly income? *</label>
         <select
           className="form-select"
           name="monthlyIncome"
@@ -209,7 +205,7 @@ const Form = () => {
         </select>
       </div>
       <div className="mb-3">
-        <label className="form-label">If you have any suggestions or recommendations regarding this PC Build, kindly mention it in detail: *</label>
+        <label className="form-label">Suggestions: *</label>
         <textarea
           className="form-control"
           name="suggestions"
@@ -218,6 +214,9 @@ const Form = () => {
         />
       </div>
       <button type="submit" className="btn btn-primary">Submit</button>
+
+      {/* Success modal component */}
+      <SuccessModal show={showModal} onClose={handleCloseModal} />
     </form>
   );
 };
